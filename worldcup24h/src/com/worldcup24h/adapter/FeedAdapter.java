@@ -52,11 +52,11 @@ public class FeedAdapter extends ArrayAdapter<FeedItem>{
 		holder.tvContent.setText(item.getContent());
 		if(item.getVideoUrl() !=null){
 			holder.videoView.setVisibility(View.VISIBLE);
-			int height = dm.heightPixels; int width = dm.widthPixels; 
-			holder.videoView.setMinimumWidth(width); 
-			holder.videoView.setMinimumHeight(height); 
-			holder.videoView.setMediaController(media_Controller); 
-			holder.videoView.setVideoPath("http://mrbool.com/how-to-play-video-formats-in-android-using-videoview/28299#ixzz34SNgqzzq"); 
+//			int height = dm.heightPixels; int width = dm.widthPixels; 
+//			holder.videoView.setMinimumWidth(width); 
+//			holder.videoView.setMinimumHeight(height); 
+//			holder.videoView.setMediaController(media_Controller); 
+//			holder.videoView.setVideoPath("http://mrbool.com/how-to-play-video-formats-in-android-using-videoview/28299#ixzz34SNgqzzq"); 
 //			holder.videoView.start();
 
 		}else{
