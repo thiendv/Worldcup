@@ -207,11 +207,14 @@ public class Service implements Runnable {
 
 			// Set default headers
 			HttpResponse response = httpclient.execute(request);
-			String token = ServiceAPILibApplication.token;
-			if (token != null ){
+//			String token = ServiceAPILibApplication.token;
+//			if (token != null )
+			{
 //				request.addHeader("Authorization", ""+token);
-				request.setHeader("Content-Type", "x-zip");
-				request.setHeader("Authorization", "" + token); // OAuth
+				request.setHeader("X-Parse-Application-Id", "pfM5F8gvvmhxnkdxMtf0fIl4jXzFMzCZ50Zm60mE");
+				request.setHeader("X-Parse-REST-API-Key", "IBeBY3vLrAzbjT6EwSKo13wEnURbuGn0MJHZgMAE");
+				request.setHeader("Content-Type", "application/json; charset=utf-8");
+//				request.setHeader("Authorization", "" + token); // OAuth
 			}
 			InputStream in = null;
 
@@ -357,9 +360,9 @@ public class Service implements Runnable {
 		return mConnection.getConnectTimeout();
 	}
 
-	public void login(ServiceAction action, String serviceType, Map<String, Object> params) {
+	public void exeService(ServiceAction action, String serviceType, Map<String, Object> params, boolean isGet) {
 		mAction = action;
-		request(serviceType, params, true, false);
+		request(serviceType, params, true, isGet);
 	}
 
 }
